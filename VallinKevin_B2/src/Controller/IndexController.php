@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\AlbumRepository;
+use App\Repository\ArtistRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,35 +13,38 @@ class IndexController extends AbstractController
     /**
      * @Route("/", name="index")
      */
-    public function index(): Response
+    public function index(AlbumRepository $albumRepository): Response
     {
         return $this->render('index/index.html.twig', [
             'controller_name' => 'IndexController',
+            'albums' => $albumRepository -> findAll()
         ]);
     }
 
     /**
-     * @Route("/accueil", name="accueil")
+     * @Route("/", name="accueil")
      */
-    public function Accueil()
+    public function Accueil(AlbumRepository $albumRepository)
     {
         return $this->render('index/accueil.html.twig', [
             'controller_name' => 'IndexController',
+            'albums' => $albumRepository -> findAll()
         ]);
     }
 
         /**
-     * @Route("/Artistes", name="Artistes")
+     * @Route("/artistes", name="artistes")
      */
-    public function Artistes()
+    public function Artistes(ArtistRepository $artistesRepository)
     {
         return $this->render('index/Artistes.html.twig', [
             'controller_name' => 'IndexController',
+            'aristes' => $artistesRepository -> findAll()
         ]);
     }
 
         /**
-     * @Route("/Showartistes", name="Showartistes")
+     * @Route("/showartistes", name="showartistes")
      */
     public function Showartistes()
     {

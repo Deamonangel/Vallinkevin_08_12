@@ -14,7 +14,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $faker = Faker\factory::create('fr_FR');
+        $faker = \Faker\Factory::create('fr_FR');
         $artist = array();
         $style = array();
         $album = array();

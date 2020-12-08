@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	{% for artiste in artistes %}
+		<section>
+			<img src="{{artiste.picture}}" alt="">
+			<p>
+				{{artiste.name}}</p>
+		</section>
+	{% endfor %}
+{% endblock %}

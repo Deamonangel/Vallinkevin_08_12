@@ -25,15 +25,15 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Accueil
+					<a class="nav-link" href="{{ path('index') }}">Accueil
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Artistes</a>
+					<a class="nav-link" href="{{ path('artistes') }}">Artistes</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Connexion</a>
+					<a class="nav-link" href="{{ path('showartistes') }}">Connexion</a>
 				</li>
 			</ul>
 			{% block javascripts %}
