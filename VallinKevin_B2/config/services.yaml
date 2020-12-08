@@ -29,3 +29,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    security:
+        [... code existant]
+        # Easy way to control access for large sections of your site
+        # Note: Only the *first* access control that matches will be used
+        access_control:
+                - { path: ^/admin, roles: ROLE_ADMIN }
+                - { path: ^/membre, roles: ROLE_USER }
+              # ou -  { path: ^/membre, roles: IS_AUTHENTICATED_FULLY }

@@ -39,7 +39,7 @@ class IndexController extends AbstractController
     {
         return $this->render('index/Artistes.html.twig', [
             'controller_name' => 'IndexController',
-            'aristes' => $artistesRepository -> findAll()
+            'artistes' => $artistesRepository -> findAll()
         ]);
     }
 
