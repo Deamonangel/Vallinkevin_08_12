@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome Delobelle xD
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css"> {% block stylesheets %}{% endblock %}
+	</head>
+
+	<body>
+		{% block nav %}
+			{% include 'nav.html.twig' %}
+		{% endblock %}
+		{% block body %}{% endblock %}
+		{% block javascripts %}{% endblock %}
+	</body>
+	</html>
